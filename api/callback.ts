@@ -1,5 +1,3 @@
-import fetch from 'node-fetch';
-
 export default async function handler(req: any, res: any) {
     console.log('Request received at /api/callback:', {
         method: req.method,
