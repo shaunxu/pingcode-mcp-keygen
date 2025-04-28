@@ -1,0 +1,23 @@
+{
+    "name": "pingcode-mcp-keygen",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "scripts": {
+        "dev": "ts-node src/index.ts",
+        "build": "tsc",
+        "start": "node dist/index.js"
+    },
+    "dependencies": {
+        "@types/koa-bodyparser": "^4.3.12",
+        "koa": "^2.14.2",
+        "koa-bodyparser": "^4.4.1",
+        "koa-static": "^5.0.0"
+    },
+    "devDependencies": {
+        "@types/koa": "^2.13.6",
+        "@types/koa-static": "^4.0.4",
+        "nodemon": "^3.0.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.0.0"
+    }
+}
