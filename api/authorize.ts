@@ -6,6 +6,6 @@ export default function handler(req: any, res: any) {
         res.status(500).send('PINGCODE_CLIENT_ID is not set');
         return;
     }
-    const redirectUrl = `https://open.pingcode.com/auth2/authorize?response_type=code&client_id=${clientId}`;
+    const redirectUrl = `https://open.pingcode.com/oauth2/authorize?response_type=code&client_id=${clientId}`;
     res.redirect(302, redirectUrl);
 }
