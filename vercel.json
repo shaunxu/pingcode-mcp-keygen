@@ -4,6 +4,10 @@
         {
             "src": "dist/index.js",
             "use": "@vercel/node"
+        },
+        {
+            "src": "web/**/*",
+            "use": "@vercel/static"
         }
     ],
     "routes": [
