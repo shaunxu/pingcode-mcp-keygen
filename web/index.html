@@ -9,32 +9,13 @@
     <h1>PingCode MCP KeyGen</h1>
     <form>
         <div>
-            <label for="endpoint">PingCode OPEN API Endpoint:</label>
-            <input type="text" id="endpoint" name="endpoint" value="https://open.pingcode.com" />
-        </div>
-        <div>
-            <label for="clientId">Client ID:</label>
-            <input type="text" id="clientId" name="clientId" />
-        </div>
-        <div>
-            <label for="clientSecret">Client Secret:</label>
-            <input type="password" id="clientSecret" name="clientSecret" />
-        </div>
-        <div>
             <button type="button" id="generateBtn">Generate</button>
         </div>
     </form>
     <script>
-        document.getElementById('generateBtn').addEventListener('click', function() {
-            const endpoint = document.getElementById('endpoint').value;
-            const clientId = document.getElementById('clientId').value;
-            if (!endpoint || !clientId) {
-                alert('Please enter both Endpoint and Client ID.');
-                return;
-            }
-            const url = `${endpoint.replace(/\/$/, '')}/oauth2/authorize?response_type=code&client_id=${encodeURIComponent(clientId)}`;
-            window.location.href = url;
-        });
+    document.getElementById('generateBtn').onclick = function() {
+        window.location.href = '/api/authorize';
+    };
     </script>
 </body>
 </html>
