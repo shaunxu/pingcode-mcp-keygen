@@ -5,5 +5,6 @@ export default function handler(req: any, res: any) {
         body: req.body,
         query: req.query,
     });
-    res.status(200).send('Callback received');
+    const code = req.query.code;
+    res.status(200).send(`Received code: ${code}`);
 }
