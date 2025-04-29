@@ -82,17 +82,11 @@
             <div class="description">
                 点击下方按钮生成 PingCode MCP 的密钥。此过程需要您登录并授权您的 PingCode 账号。
             </div>
-            <md-filled-button id="generateBtn">
-                <span class="material-icons">key</span>
+            <md-filled-button onclick="window.location.href = '/api/authorize'">
+                <md-icon>key</md-icon>
                 生成密钥
             </md-filled-button>
         </div>
     </main>
-
-    <script>
-        document.getElementById('generateBtn').onclick = function() {
-            window.location.href = '/api/authorize';
-        };
-    </script>
 </body>
 </html>
