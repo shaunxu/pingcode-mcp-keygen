@@ -6,10 +6,10 @@
     <title>PingCode MCP KeyGen</title>
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Material Design Web Components -->
+    <!-- Material Design -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/@material/web/button/styles.css" rel="stylesheet">
-    <script type="module" src="https://unpkg.com/@material/web/all.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -57,18 +57,19 @@
             line-height: 1.5;
         }
 
-        md-filled-button {
-            --md-filled-button-container-color: #6200ee;
-            --md-filled-button-label-text-color: #ffffff;
+        .btn-large {
             width: 100%;
+            background-color: #6200ee !important;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 8px;
+            height: 48px;
         }
 
-        md-filled-button .material-icons {
+        .btn-large i {
             font-size: 20px;
+            margin-right: 8px;
         }
     </style>
 </head>
@@ -82,10 +83,10 @@
             <div class="description">
                 点击下方按钮生成 PingCode MCP 的密钥。此过程需要您登录并授权您的 PingCode 账号。
             </div>
-            <md-filled-button onclick="window.location.href = '/api/authorize'">
-                <md-icon>key</md-icon>
+            <a href="/api/authorize" class="waves-effect waves-light btn-large">
+                <i class="material-icons left">key</i>
                 生成密钥
-            </md-filled-button>
+            </a>
         </div>
     </main>
 </body>
